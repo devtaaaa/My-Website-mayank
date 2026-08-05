@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #070b12;
+    --bg-card: #0e1526;
+    --bg-card-hover: #141e36;
+    --solar-yellow: #f59e0b;
+    --solar-amber: #fbbf24;
+    --electric-blue: #3b82f6;
+    --cyan-accent: #06b6d4;
+    --metallic-grey: #334155;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-glass: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Machinery & Solar CSS Utilities */
+.glass-panel {
+  background: rgba(14, 21, 38, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 30, 54, 0.85);
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
+}
+
+.mechanical-btn {
+  position: relative;
+  transition: all 0.15s ease-out;
+  transform: translateY(0);
+  box-shadow: 0 4px 0 #b45309, 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mechanical-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b45309, 0 6px 15px rgba(245, 158, 11, 0.3);
+}
+
+.mechanical-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #b45309, 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.mechanical-btn-blue {
+  box-shadow: 0 4px 0 #1d4ed8, 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.mechanical-btn-blue:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #1d4ed8, 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+.mechanical-btn-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1d4ed8, 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.solar-grid-pattern {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+}
+
+/* Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4)); }
+  50% { opacity: 0.9; filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.8)); }
+}
+
+@keyframes flowCurrent {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 25s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070b12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Mechanical shutter reveal effect */
+.shutter-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.shutter-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #070b12;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 2;
+}
+.shutter-reveal.active::before {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
