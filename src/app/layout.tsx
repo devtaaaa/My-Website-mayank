@@ -56,7 +56,7 @@ export default function RootLayout({
       postalCode: '249401',
       addressCountry: 'IN',
     },
-    telephone: '+91-9548477854',
+    telephone: '+91-8799999920',
     email: 'sales@mayankindustries.org',
     url: 'https://mayankindustries.org',
     openingHours: 'Mo-Sa 09:00-18:00',

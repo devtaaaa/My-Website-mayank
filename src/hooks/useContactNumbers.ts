@@ -11,11 +11,11 @@ export function useContactNumbers() {
   } 
   // Solar page or Home page (which has solar focus)
   else if (pathname?.includes('solar') || pathname === '/') {
-    numbers = ['+91-7819987854'];
+    numbers = ['+91-8799999920', '+91-7819987854'];
   } 
   // Remaining pages
   else {
-    numbers = ['+91-9548477854'];
+    numbers = ['+91-8799999920', '+91-9548477854'];
   }
 
   const primaryNumber = numbers[0];
