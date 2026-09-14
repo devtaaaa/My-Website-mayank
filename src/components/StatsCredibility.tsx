@@ -6,8 +6,8 @@ import AnimatedNumber from './AnimatedNumber';
 
 export default function StatsCredibility() {
   const stats = [
-    { value: 45, suffix: '+', label: 'Years Experience', subtext: 'Associated with GOGOAL Hydro' },
-    { value: 494, suffix: '+', label: 'Projects Completed', subtext: 'Factories, Hydro & Solar' },
+    { value: 46, suffix: '+', label: 'Years Experience', subtext: 'Associated with GOGOAL Hydro' },
+    { value: 519, suffix: '+', label: 'Projects Completed', subtext: 'Factories, Hydro & Solar' },
     { value: 100, suffix: '%', label: 'Turnkey Execution', subtext: 'Design, Supply & Erection' },
     { value: 24, suffix: '/7', label: 'AMC & Tech Support', subtext: 'Haridwar Industrial Base' },
   ];
