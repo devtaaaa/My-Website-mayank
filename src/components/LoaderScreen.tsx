@@ -36,6 +36,8 @@ export default function LoaderScreen() {
           <img
             src="/images/mayank-logo.png"
             alt="Mayank Industries - Reliability & Quality"
+            width={240}
+            height={96}
             className="h-12 md:h-16 w-auto object-contain"
           />
         </div>

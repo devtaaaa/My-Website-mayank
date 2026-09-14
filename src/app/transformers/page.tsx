@@ -74,6 +74,8 @@ export default function TransformersPage() {
               <img 
                 src="/images/ai/industrial_transformer.png" 
                 alt="Industrial Power Transformer 33kV" 
+                width={800}
+                height={800}
                 className="w-full h-auto object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent backdrop-blur-sm">

@@ -49,6 +49,8 @@ export default function Navbar() {
             <img
               src="/images/mayank-logo.png"
               alt="Mayank Industries - Reliability & Quality"
+              width={160}
+              height={60}
               className="h-7 sm:h-8 md:h-9 w-auto object-contain"
             />
           </div>

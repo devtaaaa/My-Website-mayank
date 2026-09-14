@@ -58,6 +58,8 @@ export default function ContactSection() {
                 <img
                   src="/images/mayank-logo.png"
                   alt="Mayank Industries - Reliability & Quality"
+                  width={160}
+                  height={60}
                   className="h-10 w-auto object-contain"
                 />
               </div>

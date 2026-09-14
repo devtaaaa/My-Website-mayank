@@ -61,6 +61,8 @@ export default function ChannelPartners() {
               <img
                 src={item.src}
                 alt={item.name}
+                width={160}
+                height={80}
                 className="max-h-16 max-w-full object-contain filter grayscale group-hover/card:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />

@@ -6,8 +6,9 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
-  title: 'Mayank Industries | Industrial Solar, Electrical & Mechanical Solutions in Haridwar',
-  description: 'Mayank Industries provides turnkey industrial solar power plant solutions, electrical & mechanical installation, fabrication, calibration, fire hydrant systems, and AMC services for factories and commercial units in Uttarakhand.',
+  metadataBase: new URL('https://mayankindustries.org'),
+  title: 'Mayank Industries | Solar & Electrical Solutions',
+  description: 'Turnkey industrial solar plants, electrical & mechanical engineering, fabrication, fire systems, and AMC services in Haridwar, Uttarakhand.',
   keywords: [
     'Industrial solar company in Haridwar',
     'Solar EPC company in Uttarakhand',
@@ -23,10 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mayank Industries | Industrial Solar & Engineering Solutions',
     description: 'Turnkey solar power plant solutions, electrical & mechanical installation, heavy fabrication, fire systems, and AMC support in Haridwar, Uttarakhand.',
-    url: 'https://mayankindustries.com',
+    url: 'https://mayankindustries.org',
     siteName: 'Mayank Industries',
     locale: 'en_IN',
     type: 'website',
+  },
+  alternates: {
+    canonical: '/',
   },
   robots: {
     index: true,
@@ -54,9 +58,14 @@ export default function RootLayout({
     },
     telephone: '+91-9548477854',
     email: 'sales@mayankindustries.org',
-    url: 'https://mayankindustries.com',
+    url: 'https://mayankindustries.org',
     openingHours: 'Mo-Sa 09:00-18:00',
-    sameAs: ['https://mayankindustries.com'],
+    sameAs: [
+      'https://mayankindustries.org',
+      'https://www.instagram.com/mayank.industries?stkn=MTI1MXI3NWNyamtvYw==',
+      'https://www.linkedin.com/in/mayank-industries-50a5a634b',
+      'https://www.facebook.com/profile.php?id=100082619857415'
+    ],
   };
 
   return (

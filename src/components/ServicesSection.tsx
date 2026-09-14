@@ -145,6 +145,8 @@ export default function ServicesSection() {
                   <img
                     src={srv.image}
                     alt={srv.title}
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0e1526] via-[#0e1526]/50 to-transparent" />
@@ -213,6 +215,8 @@ export default function ServicesSection() {
                       <img
                         src={modalData.image}
                         alt={modalData.title}
+                        width={600}
+                        height={400}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0b1322] via-[#0b1322]/40 to-transparent" />
