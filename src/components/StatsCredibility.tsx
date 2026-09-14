@@ -82,7 +82,7 @@ export default function StatsCredibility() {
 
             <div className="pt-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="mechanical-btn bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold px-8 py-4 rounded-lg text-xs uppercase tracking-wider inline-flex items-center shadow-xl shadow-amber-500/20"
               >
                 <ShieldCheck className="w-4 h-4 mr-2" />

@@ -56,7 +56,7 @@ export default function AboutSection() {
 
             <div className="pt-2">
               <a
-                href="#contact"
+                href="/contact"
                 className="mechanical-btn bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-8 py-4 rounded-lg text-xs uppercase tracking-wider inline-flex items-center shadow-xl"
               >
                 <span>Connect With Technical Team</span>
@@ -75,7 +75,7 @@ export default function AboutSection() {
                 />
                 <div className="p-5 rounded-2xl glass-panel border border-slate-800 text-center">
                   <div className="text-3xl font-black text-amber-400 font-mono">
-                    <AnimatedNumber value={494} suffix="+" duration={2000} />
+                    <AnimatedNumber value={519} suffix="+" duration={2000} />
                   </div>
                   <div className="text-xs font-bold text-white uppercase mt-1">Projects Executed</div>
                 </div>
@@ -84,7 +84,7 @@ export default function AboutSection() {
               <div className="space-y-4 pt-8">
                 <div className="p-5 rounded-2xl glass-panel border border-slate-800 text-center">
                   <div className="text-3xl font-black text-emerald-400 font-mono">
-                    <AnimatedNumber value={45} suffix="+" duration={2000} /> Yrs
+                    <AnimatedNumber value={46} suffix="+" duration={2000} /> Yrs
                   </div>
                   <div className="text-xs font-bold text-white uppercase mt-1">Engineering Heritage</div>
                 </div>
