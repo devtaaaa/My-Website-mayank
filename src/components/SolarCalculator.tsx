@@ -29,7 +29,7 @@ export default function SolarCalculator() {
   };
 
   return (
-    <section id="solar-calculator" className="py-24 bg-[#070b12] relative overflow-hidden">
+    <section id="solar-calculator" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -42,14 +42,14 @@ export default function SolarCalculator() {
             <span>Interactive Industrial ROI Estimator</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Calculate Your Plant&apos;s{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">
               Solar Savings Potential
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-slate-600">
             Use our technical B2B estimator to evaluate recommended solar capacity (kWp), estimated annual electricity bill savings, payback timeline, and environmental impact.
           </p>
         </div>
@@ -58,22 +58,22 @@ export default function SolarCalculator() {
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Form Panel */}
-          <div className="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-700/80 shadow-2xl relative">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+          <div className="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-2xl relative">
+            <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
               <span className="text-xs font-mono text-amber-400 uppercase flex items-center">
                 <Zap className="w-4 h-4 mr-1 text-amber-400" /> B2B Solar Feasibility Parameters
               </span>
-              <span className="text-[10px] font-mono text-slate-400">MAYANK ENGINEERING V3.2</span>
+              <span className="text-[10px] font-mono text-slate-500">MAYANK ENGINEERING V3.2</span>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Field 1: Monthly Electricity Bill */}
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-800">
                     Average Monthly Electricity Bill (₹)
                   </label>
-                  <span className="text-base font-mono font-extrabold text-amber-400 bg-slate-900 px-3 py-1 rounded border border-amber-500/30">
+                  <span className="text-base font-mono font-extrabold text-amber-400 bg-slate-50 px-3 py-1 rounded border border-amber-500/30">
                     ₹ {monthlyBill.toLocaleString('en-IN')}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export default function SolarCalculator() {
                   step="25000"
                   value={monthlyBill}
                   onChange={(e) => setMonthlyBill(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                  className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-amber-400"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
                   <span>₹25,000 / mo</span>
@@ -95,10 +95,10 @@ export default function SolarCalculator() {
               {/* Field 2: Available Roof / Land Area */}
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-800">
                     Available Roof or Land Area (Sq. Ft.)
                   </label>
-                  <span className="text-base font-mono font-extrabold text-blue-400 bg-slate-900 px-3 py-1 rounded border border-blue-500/30">
+                  <span className="text-base font-mono font-extrabold text-blue-400 bg-slate-50 px-3 py-1 rounded border border-blue-500/30">
                     {roofArea.toLocaleString('en-IN')} sq.ft
                   </span>
                 </div>
@@ -109,7 +109,7 @@ export default function SolarCalculator() {
                   step="1000"
                   value={roofArea}
                   onChange={(e) => setRoofArea(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-400"
+                  className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-400"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
                   <span>2,000 sq.ft</span>
@@ -120,13 +120,13 @@ export default function SolarCalculator() {
               {/* Field 3 & 4: Business Type & Location */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
                     Industry / Business Type
                   </label>
                   <select
                     value={businessType}
                     onChange={(e) => setBusinessType(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700/80 rounded-lg p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-400"
+                    className="w-full bg-slate-50 border border-slate-200/80 rounded-lg p-3 text-xs font-semibold text-slate-900 focus:outline-none focus:border-amber-400"
                   >
                     <option>Factory / Manufacturing</option>
                     <option>Warehouse / Logistics Hub</option>
@@ -138,13 +138,13 @@ export default function SolarCalculator() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
                     Facility Location
                   </label>
                   <select
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700/80 rounded-lg p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-400"
+                    className="w-full bg-slate-50 border border-slate-200/80 rounded-lg p-3 text-xs font-semibold text-slate-900 focus:outline-none focus:border-amber-400"
                   >
                     <option>Haridwar Industrial Area</option>
                     <option>SIDCUL Haridwar</option>
@@ -158,7 +158,7 @@ export default function SolarCalculator() {
 
               {/* Field 5: Phone Number & Contact */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-200 mb-2">
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
                   Contact Phone / WhatsApp (For Detailed Engineering Audit)
                 </label>
                 <div className="relative">
@@ -169,7 +169,7 @@ export default function SolarCalculator() {
                     placeholder="+91-9876543210"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full bg-slate-900 border border-slate-700/80 rounded-lg py-3 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
+                    className="w-full bg-slate-50 border border-slate-200/80 rounded-lg py-3 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-500 focus:outline-none focus:border-amber-400"
                   />
                 </div>
               </div>
@@ -195,48 +195,48 @@ export default function SolarCalculator() {
 
           {/* Right Live Results Output Dashboard Card */}
           <div className="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-2xl border border-amber-500/30 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#0b1322] to-[#070b12]">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+            <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
               <span className="text-xs font-mono text-emerald-400 uppercase flex items-center">
                 <ShieldCheck className="w-4 h-4 mr-1 text-emerald-400" /> Live Solar Metrics
               </span>
-              <span className="text-[10px] font-mono text-slate-400">NET-METERING READY</span>
+              <span className="text-[10px] font-mono text-slate-500">NET-METERING READY</span>
             </div>
 
             {/* Estimated Solar System Capacity */}
-            <div className="mb-6 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-              <div className="text-xs font-mono text-slate-400 uppercase mb-1">Recommended Solar Capacity</div>
+            <div className="mb-6 p-4 rounded-xl bg-slate-50/80 border border-slate-200">
+              <div className="text-xs font-mono text-slate-500 uppercase mb-1">Recommended Solar Capacity</div>
               <div className="text-3xl sm:text-4xl font-black text-amber-400 font-mono flex items-baseline">
-                <AnimatedNumber value={recommendedKw} duration={1500} /> <span className="text-lg font-normal text-slate-300 ml-2">kWp Plant</span>
+                <AnimatedNumber value={recommendedKw} duration={1500} /> <span className="text-lg font-normal text-slate-600 ml-2">kWp Plant</span>
               </div>
-              <div className="text-[11px] text-slate-400 mt-1">
+              <div className="text-[11px] text-slate-500 mt-1">
                 Optimized for {businessType} load profile
               </div>
             </div>
 
             {/* Estimated Annual Electricity Savings */}
-            <div className="mb-6 p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-              <div className="text-xs font-mono text-slate-400 uppercase mb-1">Estimated Annual Bill Savings</div>
+            <div className="mb-6 p-4 rounded-xl bg-slate-50/80 border border-slate-200">
+              <div className="text-xs font-mono text-slate-500 uppercase mb-1">Estimated Annual Bill Savings</div>
               <div className="text-3xl sm:text-4xl font-black text-emerald-400 font-mono flex items-baseline">
                 ₹ <AnimatedNumber value={annualSavings} format={(val) => Math.floor(val).toLocaleString('en-IN')} duration={2000} className="ml-2" />{' '}
-                <span className="text-xs font-normal text-slate-400 ml-2">/ Year</span>
+                <span className="text-xs font-normal text-slate-500 ml-2">/ Year</span>
               </div>
-              <div className="text-[11px] text-slate-400 mt-1">
+              <div className="text-[11px] text-slate-500 mt-1">
                 Based on commercial slab tariff &amp; captive consumption
               </div>
             </div>
 
             {/* Grid Stats: CO2 & Payback */}
             <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-center">
-                <div className="text-[10px] font-mono text-slate-400 uppercase">Carbon Offset</div>
+              <div className="p-3 rounded-lg bg-slate-50/60 border border-slate-200 text-center">
+                <div className="text-[10px] font-mono text-slate-500 uppercase">Carbon Offset</div>
                 <div className="text-lg font-bold text-blue-400 font-mono mt-0.5">
                   <AnimatedNumber value={carbonOffset} duration={1500} /> Tons
                 </div>
                 <div className="text-[9px] text-slate-500">CO2 Reduced / Year</div>
               </div>
 
-              <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-center">
-                <div className="text-[10px] font-mono text-slate-400 uppercase">Estimated Payback</div>
+              <div className="p-3 rounded-lg bg-slate-50/60 border border-slate-200 text-center">
+                <div className="text-[10px] font-mono text-slate-500 uppercase">Estimated Payback</div>
                 <div className="text-lg font-bold text-purple-400 font-mono mt-0.5">
                   <AnimatedNumber value={Number(paybackYears)} format={(val) => val.toFixed(1)} duration={1500} /> Years
                 </div>
@@ -251,7 +251,7 @@ export default function SolarCalculator() {
 
             <a
               href="#contact"
-              className="w-full py-3 text-xs font-bold uppercase tracking-wider rounded bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-colors flex items-center justify-center border border-slate-700"
+              className="w-full py-3 text-xs font-bold uppercase tracking-wider rounded bg-slate-100 hover:bg-slate-700 text-slate-800 hover:text-slate-900 transition-colors flex items-center justify-center border border-slate-200"
             >
               <span>Book Site Visit & Roof Inspection</span>
               <ArrowRight className="w-4 h-4 ml-1" />

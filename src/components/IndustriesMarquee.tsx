@@ -23,9 +23,9 @@ export default function IndustriesMarquee() {
   ];
 
   return (
-    <section className="py-16 bg-[#070b12] border-y border-slate-800/80 overflow-hidden relative">
+    <section className="py-16 bg-transparent border-y border-slate-200/80 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-        <span className="text-xs font-mono uppercase text-slate-400 tracking-widest">
+        <span className="text-xs font-mono uppercase text-slate-500 tracking-widest">
           Sectors Served &amp; Industry Brand Ecosystem
         </span>
       </div>
@@ -38,7 +38,7 @@ export default function IndustriesMarquee() {
             return (
               <div
                 key={idx}
-                className="flex items-center space-x-3 px-5 py-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-200 text-xs font-bold uppercase tracking-wider whitespace-nowrap"
+                className="flex items-center space-x-3 px-5 py-3 rounded-xl bg-slate-50/80 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider whitespace-nowrap"
               >
                 <IconComponent className="w-4 h-4 text-amber-400" />
                 <span>{ind.name}</span>
@@ -60,7 +60,7 @@ export default function IndustriesMarquee() {
           {brandPartners.map((brand, idx) => (
             <div
               key={idx}
-              className="p-3 rounded-lg bg-slate-900/50 border border-slate-800 text-center font-mono font-bold text-xs text-slate-400 hover:text-white hover:border-amber-500/40 transition-colors"
+              className="p-3 rounded-lg bg-slate-50/50 border border-slate-200 text-center font-mono font-bold text-xs text-slate-500 hover:text-slate-900 hover:border-amber-500/40 transition-colors"
             >
               {brand}
             </div>

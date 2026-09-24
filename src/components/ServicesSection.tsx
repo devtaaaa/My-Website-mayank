@@ -106,7 +106,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#090e18] relative overflow-hidden">
+    <section id="services" className="py-24 bg-white relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 grid-pattern opacity-15 pointer-events-none" />
 
@@ -114,19 +114,19 @@ export default function ServicesSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Wrench className="w-4 h-4" />
             <span>Turnkey B2B Engineering Capabilities</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Turnkey Industrial Services{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
               Under One Roof
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-slate-600">
             Mayank Industries executes complete engineering, erection, calibration, overhauling, and solar projects with experienced engineers, technicians, and specialized tooling.
           </p>
         </div>
@@ -138,10 +138,10 @@ export default function ServicesSection() {
             return (
               <div
                 key={srv.id}
-                className="glass-panel glass-panel-hover rounded-2xl overflow-hidden relative group flex flex-col justify-between border border-slate-700/70"
+                className="glass-panel glass-panel-hover rounded-2xl overflow-hidden relative group flex flex-col justify-between border border-slate-200/70"
               >
                 {/* Service Card Image Header */}
-                <div className="relative h-44 overflow-hidden bg-slate-950">
+                <div className="relative h-44 overflow-hidden bg-slate-100">
                   <img
                     src={srv.image}
                     alt={srv.title}
@@ -155,7 +155,7 @@ export default function ServicesSection() {
                     {srv.category}
                   </span>
                   
-                  <span className="absolute top-3 right-3 text-[10px] font-mono text-slate-200 bg-slate-900/90 px-2 py-1 rounded border border-slate-700">
+                  <span className="absolute top-3 right-3 text-[10px] font-mono text-slate-800 bg-slate-50/90 px-2 py-1 rounded border border-slate-200">
                     {srv.tag}
                   </span>
                 </div>
@@ -167,12 +167,12 @@ export default function ServicesSection() {
                       <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
                         <IconComp className="w-5 h-5 text-amber-400" />
                       </div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-amber-300 transition-colors">
                         {srv.title}
                       </h3>
                     </div>
 
-                    <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                    <p className="text-xs text-slate-600 leading-relaxed mb-6">
                       {srv.summary}
                     </p>
                   </div>
@@ -180,7 +180,7 @@ export default function ServicesSection() {
                   {/* Card Action */}
                   <button
                     onClick={() => setActiveModal(srv.id)}
-                    className="w-full py-3 rounded-lg bg-slate-900 hover:bg-amber-500 hover:text-black border border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-200 transition-all flex items-center justify-center space-x-2"
+                    className="w-full py-3 rounded-lg bg-slate-50 hover:bg-amber-500 hover:text-black border border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-800 transition-all flex items-center justify-center space-x-2"
                   >
                     <span>Know Detailed Scope</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -194,12 +194,12 @@ export default function ServicesSection() {
         {/* Modal Drawer for Service Scope */}
         {activeModal !== null && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
-            <div className="bg-[#0b1322] border border-amber-500/40 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+            <div className="bg-white border border-amber-500/40 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
               
               {/* Close Button */}
               <button
                 onClick={() => setActiveModal(null)}
-                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-lg bg-slate-900 border border-slate-800 z-10"
+                className="absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-900 rounded-lg bg-slate-50 border border-slate-200 z-10"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -211,7 +211,7 @@ export default function ServicesSection() {
                 const IconComponent = modalData.icon;
                 return (
                   <div>
-                    <div className="relative h-48 rounded-xl overflow-hidden mb-6 bg-slate-950">
+                    <div className="relative h-48 rounded-xl overflow-hidden mb-6 bg-slate-100">
                       <img
                         src={modalData.image}
                         alt={modalData.title}
@@ -230,27 +230,27 @@ export default function ServicesSection() {
                         <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest">
                           {modalData.category}
                         </span>
-                        <h3 className="text-2xl font-black text-white">{modalData.title}</h3>
+                        <h3 className="text-2xl font-black text-slate-900">{modalData.title}</h3>
                       </div>
                     </div>
 
-                    <p className="text-sm text-slate-300 mb-6 leading-relaxed">
+                    <p className="text-sm text-slate-600 mb-6 leading-relaxed">
                       {modalData.summary}
                     </p>
 
                     <div className="space-y-3 mb-8">
-                      <h4 className="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">
+                      <h4 className="text-xs font-mono font-bold uppercase text-slate-500 tracking-wider">
                         Technical Deliverables &amp; Scope of Work:
                       </h4>
                       {modalData.details.map((item, idx) => (
-                        <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-200">
+                        <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-800">
                           <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4 border-t border-slate-800">
+                    <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4 border-t border-slate-200">
                       <a
                         href="#contact"
                         onClick={() => setActiveModal(null)}
@@ -260,7 +260,7 @@ export default function ServicesSection() {
                       </a>
                       <button
                         onClick={() => setActiveModal(null)}
-                        className="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-900 border border-slate-700 text-xs font-bold text-slate-300 hover:text-white"
+                        className="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-50 border border-slate-200 text-xs font-bold text-slate-600 hover:text-slate-900"
                       >
                         Close Details
                       </button>

@@ -50,7 +50,7 @@ export default function SolarFocus() {
   ];
 
   return (
-    <section id="solar-solutions" className="py-24 bg-[#090e18] relative overflow-hidden">
+    <section id="solar-solutions" className="py-24 bg-white relative overflow-hidden">
       {/* Background Solar Grid Line Effect */}
       <div className="absolute inset-0 solar-grid-pattern opacity-30 pointer-events-none" />
 
@@ -66,25 +66,25 @@ export default function SolarFocus() {
             <span>Core B2B Marketing Focus</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Industrial Solar Solutions For{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
               High-Energy Businesses
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base text-slate-600 leading-relaxed">
             Industrial electricity rates consume up to 35% of operational overhead. Mayank Industries delivers complete turnkey solar EPC—from feasibility analysis and structural audits to CEIG net-metering approvals and grid synchronization.
           </p>
         </div>
 
         {/* Animated Visual Schematic: Solar Panels -> Factory Power Grid */}
-        <div className="mb-16 p-8 rounded-2xl glass-panel border border-slate-700/80 shadow-2xl relative overflow-hidden">
+        <div className="mb-16 p-8 rounded-2xl glass-panel border border-slate-200/80 shadow-2xl relative overflow-hidden">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             
             {/* Visual Schematic Diagram */}
-            <div className="lg:col-span-7 bg-[#05080f] p-6 rounded-xl border border-slate-800 relative">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-6">
+            <div className="lg:col-span-7 bg-slate-50 p-6 rounded-xl border border-slate-200 relative">
+              <div className="flex items-center justify-between border-b border-slate-200 pb-3 mb-6">
                 <span className="text-xs font-mono text-amber-400 uppercase flex items-center">
                   <Zap className="w-4 h-4 mr-1 text-amber-400" /> Live Power Schematic Simulation
                 </span>
@@ -133,16 +133,16 @@ export default function SolarFocus() {
               </div>
 
               {/* Status bar */}
-              <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-800 text-center text-xs font-mono">
-                <div className="p-2 rounded bg-slate-900">
+              <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-200 text-center text-xs font-mono">
+                <div className="p-2 rounded bg-slate-50">
                   <div className="text-slate-500 text-[10px]">PAYBACK PERIOD</div>
                   <div className="text-amber-400 font-bold">3.2 - 4.5 Years</div>
                 </div>
-                <div className="p-2 rounded bg-slate-900">
+                <div className="p-2 rounded bg-slate-50">
                   <div className="text-slate-500 text-[10px]">SYSTEM WARRANTY</div>
                   <div className="text-blue-400 font-bold">25 Years Performance</div>
                 </div>
-                <div className="p-2 rounded bg-slate-900">
+                <div className="p-2 rounded bg-slate-50">
                   <div className="text-slate-500 text-[10px]">TAX BENEFIT</div>
                   <div className="text-emerald-400 font-bold">40% Accelerated Depr.</div>
                 </div>
@@ -151,11 +151,11 @@ export default function SolarFocus() {
 
             {/* Turnkey Process Explanation */}
             <div className="lg:col-span-5 flex flex-col justify-center space-y-5">
-              <h3 className="text-2xl font-bold text-white uppercase tracking-tight">
+              <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">
                 End-To-End Solar EPC Services For Industrial Units
               </h3>
               
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Mayank Industries takes care of your entire solar journey. From initial shadow profiling and roof load structural testing to Net-metering sync with UPCL/state discoms and lifetime preventive AMC.
               </p>
 
@@ -166,7 +166,7 @@ export default function SolarFocus() {
                   'CEIG Electrical Inspectorate Approval & Net-Metering Setup',
                   'SCADA Remote Performance Monitoring & Diagnostic Dashboards',
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-200">
+                  <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-800">
                     <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
@@ -194,10 +194,10 @@ export default function SolarFocus() {
             return (
               <div
                 key={idx}
-                className="glass-panel glass-panel-hover rounded-xl overflow-hidden relative group flex flex-col justify-between border border-slate-700/70"
+                className="glass-panel glass-panel-hover rounded-xl overflow-hidden relative group flex flex-col justify-between border border-slate-200/70"
               >
                 {/* Sector Image Header */}
-                <div className="relative h-44 overflow-hidden bg-slate-950">
+                <div className="relative h-44 overflow-hidden bg-slate-100">
                   <img
                     src={sec.image}
                     alt={sec.title}
@@ -211,7 +211,7 @@ export default function SolarFocus() {
                     {sec.badge}
                   </span>
 
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-900/90 border border-slate-700 flex items-center justify-center backdrop-blur-md">
+                  <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-50/90 border border-slate-200 flex items-center justify-center backdrop-blur-md">
                     <IconComponent className="w-4 h-4 text-amber-400" />
                   </div>
                 </div>
@@ -219,18 +219,18 @@ export default function SolarFocus() {
                 {/* Card Content Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">
                       {sec.title}
                     </h3>
 
-                    <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">
                       {sec.desc}
                     </p>
                   </div>
 
                   <a
                     href="#solar-calculator"
-                    className="inline-flex items-center text-xs font-semibold text-amber-400 group-hover:text-amber-300 pt-3 border-t border-slate-800/80"
+                    className="inline-flex items-center text-xs font-semibold text-amber-400 group-hover:text-amber-300 pt-3 border-t border-slate-200/80"
                   >
                     <span>Explore Solar Audit</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />

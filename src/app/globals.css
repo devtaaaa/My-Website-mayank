@@ -2,17 +2,17 @@
 
 @layer base {
   :root {
-    --bg-dark: #070b12;
-    --bg-card: #0e1526;
-    --bg-card-hover: #141e36;
+    --bg-dark: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
     --solar-yellow: #f59e0b;
     --solar-amber: #fbbf24;
     --electric-blue: #3b82f6;
     --cyan-accent: #06b6d4;
-    --metallic-grey: #334155;
-    --text-primary: #f8fafc;
-    --text-muted: #94a3b8;
-    --border-glass: rgba(255, 255, 255, 0.08);
+    --metallic-grey: #64748b;
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --border-glass: rgba(0, 0, 0, 0.08);
   }
 
   body {
@@ -26,10 +26,10 @@
 
 /* Custom Machinery & Solar CSS Utilities */
 .glass-panel {
-  background: rgba(14, 21, 38, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .glass-panel-hover {
@@ -37,7 +37,7 @@
 }
 
 .glass-panel-hover:hover {
-  background: rgba(20, 30, 54, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   border-color: rgba(245, 158, 11, 0.3);
   box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
 }
@@ -74,8 +74,8 @@
 .grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
 }
 
 .solar-grid-pattern {
@@ -129,10 +129,10 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #070b12;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -151,7 +151,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #070b12;
+  background: #f8fafc;
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 2;
 }

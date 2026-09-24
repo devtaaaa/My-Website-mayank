@@ -8,15 +8,15 @@ import { useContactNumbers } from '@/hooks/useContactNumbers';
 export default function Footer() {
   const { numbers } = useContactNumbers();
   return (
-    <footer className="bg-[#05080f] text-slate-400 pt-16 pb-8 border-t border-slate-800 relative overflow-hidden">
+    <footer className="bg-slate-50 text-slate-500 pt-16 pb-8 border-t border-slate-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-200/80">
           
           {/* Brand & About */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block group">
-              <div className="bg-white px-3.5 py-2 rounded-xl border border-slate-700/80 shadow-lg group-hover:scale-105 transition-transform inline-flex items-center">
+              <div className="bg-white px-3.5 py-2 rounded-xl border border-slate-200/80 shadow-lg group-hover:scale-105 transition-transform inline-flex items-center">
                 <img
                   src="/images/mayank-logo.png"
                   alt="Mayank Industries - Reliability & Quality"
@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-slate-500 leading-relaxed max-w-sm">
               Turnkey industrial solar EPC solutions, electrical &amp; mechanical installation, heavy machining, fire fighting setups, and AMC support for factories across Uttarakhand.
             </p>
 
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
+            <h4 className="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
               Quick Navigation
             </h4>
             <ul className="space-y-2 text-xs">
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Core Services */}
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
+            <h4 className="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
               B2B Services
             </h4>
             <ul className="space-y-2 text-xs">
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
+            <h4 className="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
               Haridwar Facility
             </h4>
             <div className="space-y-2 text-xs">
@@ -94,14 +94,14 @@ export default function Footer() {
                   sales@mayankindustries.org
                 </a>
               </div>
-              <div className="flex items-center space-x-4 pt-4 mt-2 border-t border-slate-800">
-                <a href="https://www.instagram.com/mayank.industries?stkn=MTI1MXI3NWNyamtvYw==" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
+              <div className="flex items-center space-x-4 pt-4 mt-2 border-t border-slate-200">
+                <a href="https://www.instagram.com/mayank.industries?stkn=MTI1MXI3NWNyamtvYw==" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-400 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/in/mayank-industries-50a5a634b" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
+                <a href="https://www.linkedin.com/in/mayank-industries-50a5a634b" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-400 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100082619857415" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=100082619857415" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-400 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 </a>
               </div>

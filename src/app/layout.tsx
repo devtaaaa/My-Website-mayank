@@ -69,14 +69,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="light scroll-smooth">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#070b12] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+      <body className="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-black">
         <LoaderScreen />
         <Navbar />
         {children}

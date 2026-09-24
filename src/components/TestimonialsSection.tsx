@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#070b12] relative overflow-hidden">
+    <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Glow highlight */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -37,19 +37,19 @@ export default function TestimonialsSection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Quote className="w-4 h-4" />
             <span>Client Endorsements &amp; B2B Trust</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             What Industrial Decision Makers Say About{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
               Mayank Industries
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-slate-600">
             Read feedback from plant heads, facility managers, and engineering heads across Haridwar &amp; Uttarakhand.
           </p>
         </div>
@@ -59,25 +59,25 @@ export default function TestimonialsSection() {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="glass-panel glass-panel-hover p-8 rounded-2xl border border-slate-800 flex flex-col justify-between relative group"
+              className="glass-panel glass-panel-hover p-8 rounded-2xl border border-slate-200 flex flex-col justify-between relative group"
             >
               <Quote className="w-10 h-10 text-amber-500/20 mb-4 group-hover:text-amber-500/40 transition-colors" />
 
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 italic">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 italic">
                 &ldquo;{rev.text}&rdquo;
               </p>
 
-              <div className="pt-4 border-t border-slate-800/80">
+              <div className="pt-4 border-t border-slate-200/80">
                 <div className="flex items-center space-x-1 mb-2">
                   {[...Array(rev.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
-                <div className="font-bold text-white text-sm">{rev.name}</div>
+                <div className="font-bold text-slate-900 text-sm">{rev.name}</div>
                 <div className="text-xs text-amber-400 font-mono">{rev.role}</div>
                 <div className="text-[11px] text-slate-500 flex items-center mt-1">
-                  <Building className="w-3 h-3 mr-1 text-slate-400" />
+                  <Building className="w-3 h-3 mr-1 text-slate-500" />
                   <span>{rev.company}</span>
                 </div>
               </div>

@@ -38,7 +38,7 @@ export default function ProductCatalog() {
   };
 
   return (
-    <section id="products" className="py-24 bg-[#070b12] relative overflow-hidden">
+    <section id="products" className="py-24 bg-transparent relative overflow-hidden">
       {/* Glow highlight */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -46,19 +46,19 @@ export default function ProductCatalog() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-blue-400 text-xs font-mono uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-blue-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Package className="w-4 h-4" />
             <span>Product & Equipment Supply Chain</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Industrial Products &{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
               Equipment Supply
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-slate-600">
             Mayank Industries sources, supplies, and installs genuine industrial electrical components, mechanical spares, safety systems, and solar equipment for plant owners across Haridwar &amp; Uttarakhand.
           </p>
 
@@ -78,13 +78,13 @@ export default function ProductCatalog() {
 
         {/* Filter Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-xl bg-slate-900 border border-slate-800 space-x-2 shadow-xl">
+          <div className="inline-flex p-1.5 rounded-xl bg-slate-50 border border-slate-200 space-x-2 shadow-xl">
             <button
               onClick={() => setActiveTab('electrical')}
               className={`px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center space-x-2 ${
                 activeTab === 'electrical'
                   ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               <Zap className="w-4 h-4" />
@@ -96,7 +96,7 @@ export default function ProductCatalog() {
               className={`px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center space-x-2 ${
                 activeTab === 'mechanical'
                   ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               <Cog className="w-4 h-4" />
@@ -108,7 +108,7 @@ export default function ProductCatalog() {
               className={`px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center space-x-2 ${
                 activeTab === 'expertise'
                   ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               <ShieldCheck className="w-4 h-4" />
@@ -122,10 +122,10 @@ export default function ProductCatalog() {
           {products[activeTab].map((prod, idx) => (
             <div
               key={idx}
-              className="glass-panel glass-panel-hover rounded-xl overflow-hidden border border-slate-800 flex flex-col justify-between group relative"
+              className="glass-panel glass-panel-hover rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between group relative"
             >
               {/* Product Image Header */}
-              <div className="relative h-44 overflow-hidden bg-slate-950">
+              <div className="relative h-44 overflow-hidden bg-slate-100">
                 <img
                   src={prod.image}
                   alt={prod.name}
@@ -139,26 +139,26 @@ export default function ProductCatalog() {
                   SPEC: {prod.specs}
                 </span>
 
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-900/90 border border-slate-700 flex items-center justify-center backdrop-blur-md">
-                  <FileCheck className="w-4 h-4 text-slate-400 group-hover:text-amber-400 transition-colors" />
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-slate-50/90 border border-slate-200 flex items-center justify-center backdrop-blur-md">
+                  <FileCheck className="w-4 h-4 text-slate-500 group-hover:text-amber-400 transition-colors" />
                 </div>
               </div>
 
               {/* Product Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">
                     {prod.name}
                   </h3>
 
-                  <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
                     {prod.desc}
                   </p>
                 </div>
 
                 <a
                   href="#contact"
-                  className="w-full py-2.5 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-800 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors mt-2"
+                  className="w-full py-2.5 rounded bg-slate-50 hover:bg-slate-100 text-slate-600 hover:text-amber-400 border border-slate-200 text-xs font-mono font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors mt-2"
                 >
                   <span>Request Price Quote</span>
                   <ArrowRight className="w-3.5 h-3.5" />

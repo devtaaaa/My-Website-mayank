@@ -38,14 +38,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'py-3 bg-[#070b12]/90 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl shadow-black/50'
+          ? 'py-3 bg-transparent/90 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl shadow-black/50'
           : 'py-5 bg-gradient-to-b from-[#070b12]/90 to-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center group flex-shrink-0">
-          <div className="bg-white px-3 py-1.5 rounded-lg border border-slate-700/80 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
+          <div className="bg-white px-3 py-1.5 rounded-lg border border-slate-200/80 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center">
             <img
               src="/images/mayank-logo.png"
               alt="Mayank Industries - Reliability & Quality"
@@ -65,7 +65,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`relative text-xs xl:text-sm font-semibold transition-colors py-1 group whitespace-nowrap ${
-                  isActive ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400'
+                  isActive ? 'text-amber-400' : 'text-slate-600 hover:text-amber-400'
                 }`}
               >
                 {link.name}
@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg bg-slate-800/80 border border-slate-700 text-slate-300 hover:text-white focus:outline-none"
+          className="lg:hidden p-2 rounded-lg bg-slate-100/80 border border-slate-200 text-slate-600 hover:text-slate-900 focus:outline-none"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -99,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-[#090e18]/95 backdrop-blur-2xl border-b border-slate-800 p-6 flex flex-col space-y-4 shadow-2xl animate-fadeIn">
+        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-white/95 backdrop-blur-2xl border-b border-slate-200 p-6 flex flex-col space-y-4 shadow-2xl animate-fadeIn">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -107,8 +107,8 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between py-3 border-b border-slate-800 text-sm font-bold uppercase tracking-wider ${
-                    isActive ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400'
+                  className={`flex items-center justify-between py-3 border-b border-slate-200 text-sm font-bold uppercase tracking-wider ${
+                    isActive ? 'text-amber-400' : 'text-slate-600 hover:text-amber-400'
                   }`}
                 >
                   <span>{link.name}</span>
@@ -128,7 +128,7 @@ export default function Navbar() {
             </div>
             <a
               href={`tel:${primaryNumberClean}`}
-              className="flex items-center justify-center py-2 text-xs font-mono text-slate-400 hover:text-amber-400"
+              className="flex items-center justify-center py-2 text-xs font-mono text-slate-500 hover:text-amber-400"
             >
               <Phone className="w-4 h-4 mr-2 text-emerald-400" />
               <span>Direct Call: {primaryNumber}</span>

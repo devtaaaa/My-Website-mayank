@@ -111,7 +111,7 @@ export default function ProjectsShowcase() {
   const filteredProjects = filter === 'all' ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-24 bg-[#090e18] relative overflow-hidden">
+    <section id="projects" className="py-24 bg-white relative overflow-hidden">
       {/* Grid Pattern */}
       <div className="absolute inset-0 solar-grid-pattern opacity-15 pointer-events-none" />
 
@@ -119,26 +119,26 @@ export default function ProjectsShowcase() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-amber-400 text-xs font-mono uppercase tracking-widest mb-4">
             <Award className="w-4 h-4" />
             <span>Proven Track Record • Real Project Portfolio</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Featured Projects &amp;{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
               Case Studies
             </span>
           </h2>
 
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-slate-600">
             Explore authentic turnkey solar installations, electrical substations, heavy fabrication, and AMC contracts executed by Mayank Industries across Haridwar &amp; Uttarakhand.
           </p>
         </div>
 
         {/* Filter Buttons */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 rounded-xl bg-slate-900 border border-slate-800 space-x-2">
+          <div className="inline-flex p-1 rounded-xl bg-slate-50 border border-slate-200 space-x-2">
             {[
               { id: 'all', label: 'All Projects' },
               { id: 'solar', label: 'Industrial Solar' },
@@ -151,7 +151,7 @@ export default function ProjectsShowcase() {
                 className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
                   filter === tab.id
                     ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
-                    : 'text-slate-400 hover:text-white'
+                    : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 {tab.label}
@@ -165,10 +165,10 @@ export default function ProjectsShowcase() {
           {filteredProjects.map((p) => (
             <div
               key={p.id}
-              className="glass-panel glass-panel-hover rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group"
+              className="glass-panel glass-panel-hover rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between group"
             >
               {/* Top Image with Overlay Badge */}
-              <div className="relative h-56 overflow-hidden bg-slate-950">
+              <div className="relative h-56 overflow-hidden bg-slate-100">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -186,12 +186,12 @@ export default function ProjectsShowcase() {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center text-[11px] font-mono text-slate-400 mb-2">
+                  <div className="flex items-center text-[11px] font-mono text-slate-500 mb-2">
                     <MapPin className="w-3.5 h-3.5 text-amber-400 mr-1 flex-shrink-0" />
                     <span>{p.location}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">
                     {p.title}
                   </h3>
 
@@ -199,8 +199,8 @@ export default function ProjectsShowcase() {
                     Industry: {p.industry}
                   </div>
 
-                  <p className="text-xs text-slate-300 leading-relaxed mb-4">
-                    <span className="font-bold text-slate-200">Scope:</span> {p.scope}
+                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                    <span className="font-bold text-slate-800">Scope:</span> {p.scope}
                   </p>
                 </div>
 

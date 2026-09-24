@@ -22,7 +22,7 @@ export default function StatsCredibility() {
   ];
 
   return (
-    <section className="py-24 bg-[#090e18] relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Grid Accent */}
       <div className="absolute inset-0 solar-grid-pattern opacity-20 pointer-events-none" />
 
@@ -33,17 +33,17 @@ export default function StatsCredibility() {
           {stats.map((st, idx) => (
             <div
               key={idx}
-              className="glass-panel p-6 rounded-2xl border border-slate-800 text-center relative group overflow-hidden"
+              className="glass-panel p-6 rounded-2xl border border-slate-200 text-center relative group overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-12 h-12 bg-amber-500/10 rounded-bl-full border-b border-l border-amber-500/20" />
               
               <div className="text-4xl sm:text-5xl font-black text-amber-400 font-mono mb-2 group-hover:scale-105 transition-transform">
                 <AnimatedNumber value={st.value} suffix={st.suffix} duration={2500} />
               </div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider mb-1">
+              <div className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-1">
                 {st.label}
               </div>
-              <div className="text-[11px] font-mono text-slate-400">
+              <div className="text-[11px] font-mono text-slate-500">
                 {st.subtext}
               </div>
             </div>
@@ -60,20 +60,20 @@ export default function StatsCredibility() {
               <span>Engineering Authority & Trust</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 uppercase tracking-tight leading-tight">
               Why Plant Owners &amp; Procurement Heads Choose{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">
                 Mayank Industries
               </span>
             </h2>
 
-            <p className="text-base text-slate-300 leading-relaxed">
+            <p className="text-base text-slate-600 leading-relaxed">
               In industrial operations, downtime and unreliable contractors cost millions. Mayank Industries brings four decades of precision hydro engineering and turnkey solar execution to keep your facility running at peak performance.
             </p>
 
             <div className="space-y-3 pt-2">
               {highlights.map((h, idx) => (
-                <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-200">
+                <div key={idx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-800">
                   <CheckCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                   <span>{h}</span>
                 </div>
@@ -93,25 +93,25 @@ export default function StatsCredibility() {
 
           {/* Right Column Feature Badge Grid */}
           <div className="lg:col-span-6">
-            <div className="glass-panel p-8 rounded-2xl border border-slate-700/80 shadow-2xl relative space-y-6">
+            <div className="glass-panel p-8 rounded-2xl border border-slate-200/80 shadow-2xl relative space-y-6">
               
-              <div className="flex items-center space-x-4 border-b border-slate-800 pb-4">
+              <div className="flex items-center space-x-4 border-b border-slate-200 pb-4">
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
                   <Factory className="w-6 h-6 text-amber-400" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-white uppercase">GOGOAL Hydro Lineage</h3>
-                  <p className="text-xs text-slate-400">Founded with deep roots in hydro turbine manufacturing, erection, and heavy machinery maintenance.</p>
+                  <h3 className="text-base font-bold text-slate-900 uppercase">GOGOAL Hydro Lineage</h3>
+                  <p className="text-xs text-slate-500">Founded with deep roots in hydro turbine manufacturing, erection, and heavy machinery maintenance.</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 border-b border-slate-800 pb-4">
+              <div className="flex items-center space-x-4 border-b border-slate-200 pb-4">
                 <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center flex-shrink-0">
                   <Zap className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-white uppercase">Government & PSU Approvals</h3>
-                  <p className="text-xs text-slate-400">Class-A electrical contractor license, CEIG inspectorate clearance experience, and state DISCOM registrations.</p>
+                  <h3 className="text-base font-bold text-slate-900 uppercase">Government & PSU Approvals</h3>
+                  <p className="text-xs text-slate-500">Class-A electrical contractor license, CEIG inspectorate clearance experience, and state DISCOM registrations.</p>
                 </div>
               </div>
 
@@ -120,8 +120,8 @@ export default function StatsCredibility() {
                   <Wrench className="w-6 h-6 text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-white uppercase">Haridwar Industrial Base</h3>
-                  <p className="text-xs text-slate-400">Located at E-60, Industrial Area Haridwar—equipped with machining bay, testing meters, and mobile service vans.</p>
+                  <h3 className="text-base font-bold text-slate-900 uppercase">Haridwar Industrial Base</h3>
+                  <p className="text-xs text-slate-500">Located at E-60, Industrial Area Haridwar—equipped with machining bay, testing meters, and mobile service vans.</p>
                 </div>
               </div>
 

@@ -27,7 +27,7 @@ export default function USPBanner() {
 
         <Link
           href="/contact"
-          className="shrink-0 bg-black text-amber-500 hover:bg-slate-900 font-bold px-6 py-3 rounded-lg uppercase tracking-wider transition-all flex items-center gap-2 shadow-xl hover:shadow-2xl"
+          className="shrink-0 bg-black text-amber-500 hover:bg-slate-50 font-bold px-6 py-3 rounded-lg uppercase tracking-wider transition-all flex items-center gap-2 shadow-xl hover:shadow-2xl"
         >
           <span>Claim Free Site Visit</span>
           <ArrowRight className="w-4 h-4" />

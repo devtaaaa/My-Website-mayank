@@ -20,7 +20,7 @@ export default function LoaderScreen() {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#070b12] transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-transparent transition-opacity duration-500 ${
         fade ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
@@ -32,7 +32,7 @@ export default function LoaderScreen() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         {/* Official Mayank Industries Logo Card */}
-        <div className="bg-white px-5 py-3.5 rounded-2xl border border-slate-700/80 shadow-2xl mb-6 flex items-center justify-center animate-pulse">
+        <div className="bg-white px-5 py-3.5 rounded-2xl border border-slate-200/80 shadow-2xl mb-6 flex items-center justify-center animate-pulse">
           <img
             src="/images/mayank-logo.png"
             alt="Mayank Industries - Reliability & Quality"
@@ -42,13 +42,13 @@ export default function LoaderScreen() {
           />
         </div>
 
-        <div className="flex items-center space-x-2 text-xs md:text-sm text-slate-400 font-mono tracking-widest uppercase">
+        <div className="flex items-center space-x-2 text-xs md:text-sm text-slate-500 font-mono tracking-widest uppercase">
           <ShieldCheck className="w-4 h-4 text-emerald-400" />
           <span>Engineering Industrial Power & Solar EPC</span>
         </div>
 
         {/* Animated Progress Bar */}
-        <div className="w-64 h-1.5 bg-slate-800 rounded-full overflow-hidden mt-6 border border-slate-700/50">
+        <div className="w-64 h-1.5 bg-slate-100 rounded-full overflow-hidden mt-6 border border-slate-200/50">
           <div className="h-full bg-gradient-to-r from-amber-500 via-amber-400 to-blue-500 animate-[flowCurrent_1.5s_infinite_linear] w-full rounded-full" />
         </div>
       </div>
