@@ -48,7 +48,7 @@ export default function Hero() {
   }, [slides.length]);
 
   return (
-    <section id="hero" className="relative bg-white pt-32 lg:pt-48 pb-20 overflow-hidden">
+    <section id="hero" className="relative bg-white pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Subtle Background Pattern for professional look */}
       <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
       
