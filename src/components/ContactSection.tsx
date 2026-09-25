@@ -99,18 +99,34 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Email */}
+              {/* Sales Email */}
+              <div className="flex items-start space-x-4 border-b border-slate-100 pb-4">
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Mail className="w-5 h-5 text-emerald-400" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-slate-500 uppercase">Sales &amp; Inquiry</div>
+                  <a href="mailto:sales@mayankindustries.org" className="block text-sm font-mono font-bold text-amber-400 hover:text-amber-300 mt-0.5">
+                    sales@mayankindustries.org
+                  </a>
+                  <div className="text-[10px] text-slate-500 font-mono mt-1">
+                    For all general sales inquiries &amp; product information
+                  </div>
+                </div>
+              </div>
+
+              {/* Purchase Email */}
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 mt-1">
                   <Mail className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-slate-500 uppercase">Purchase &amp; Official Enquiries</div>
+                  <div className="text-xs font-mono text-slate-500 uppercase">Purchase &amp; Official</div>
                   <a href="mailto:purchase@mayankindustries.org" className="block text-sm font-mono font-bold text-amber-400 hover:text-amber-300 mt-0.5">
                     purchase@mayankindustries.org
                   </a>
                   <div className="text-[10px] text-slate-500 font-mono mt-1">
-                    Direct routing for RFQs, Purchase Orders &amp; Form Submissions
+                    Direct routing for RFQs, Purchase Orders &amp; Vendor Registration
                   </div>
                 </div>
               </div>

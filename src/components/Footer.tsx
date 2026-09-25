@@ -88,11 +88,21 @@ export default function Footer() {
                   <span>{num}</span>
                 </div>
               ))}
-              <div className="flex items-center space-x-2 font-mono">
-                <Mail className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
-                <a href="mailto:purchase@mayankindustries.org" className="hover:text-amber-400 transition-colors">
-                  purchase@mayankindustries.org
-                </a>
+              <div className="space-y-1 mt-3">
+                <div className="flex items-center space-x-2 font-mono">
+                  <Mail className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
+                  <span className="text-[10px] text-slate-400 uppercase w-16">Sales:</span>
+                  <a href="mailto:sales@mayankindustries.org" className="hover:text-amber-400 transition-colors">
+                    sales@mayankindustries.org
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2 font-mono">
+                  <Mail className="w-3.5 h-3.5 text-amber-400 flex-shrink-0 opacity-0" />
+                  <span className="text-[10px] text-slate-400 uppercase w-16">Purchase:</span>
+                  <a href="mailto:purchase@mayankindustries.org" className="hover:text-amber-400 transition-colors">
+                    purchase@mayankindustries.org
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-4 pt-4 mt-2 border-t border-slate-200">
                 <a href="https://www.instagram.com/mayank.industries?stkn=MTI1MXI3NWNyamtvYw==" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-400 transition-colors">
