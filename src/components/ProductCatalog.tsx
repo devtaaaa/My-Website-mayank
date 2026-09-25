@@ -68,10 +68,10 @@ export default function ProductCatalog() {
               For bulk purchase orders, RFQs &amp; component quotes:
             </span>
             <a
-              href="mailto:sales@mayankindustries.org"
+              href="mailto:purchase@mayankindustries.org"
               className="px-4 py-2 rounded bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase transition-colors"
             >
-              Email sales@mayankindustries.org
+              Email purchase@mayankindustries.org
             </a>
           </div>
         </div>

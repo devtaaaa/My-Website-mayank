@@ -106,8 +106,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs font-mono text-slate-500 uppercase">Purchase &amp; Official Enquiries</div>
-                  <a href="mailto:sales@mayankindustries.org" className="block text-sm font-mono font-bold text-amber-400 hover:text-amber-300 mt-0.5">
-                    sales@mayankindustries.org
+                  <a href="mailto:purchase@mayankindustries.org" className="block text-sm font-mono font-bold text-amber-400 hover:text-amber-300 mt-0.5">
+                    purchase@mayankindustries.org
                   </a>
                   <div className="text-[10px] text-slate-500 font-mono mt-1">
                     Direct routing for RFQs, Purchase Orders &amp; Form Submissions
@@ -273,7 +273,7 @@ export default function ContactSection() {
                 <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs flex items-center space-x-2">
                   <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                   <span>
-                    Your enquiry has been received and routed directly to <strong>sales@mayankindustries.org</strong>. Our engineering &amp; purchase department will respond within 4 business hours.
+                    Your enquiry has been received and routed directly to <strong>purchase@mayankindustries.org</strong>. Our engineering &amp; purchase department will respond within 4 business hours.
                   </span>
                 </div>
               )}

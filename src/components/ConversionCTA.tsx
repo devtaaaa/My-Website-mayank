@@ -47,11 +47,11 @@ export default function ConversionCTA() {
             </a>
 
             <a
-              href="mailto:sales@mayankindustries.org"
+              href="mailto:purchase@mayankindustries.org"
               className="mechanical-btn bg-slate-100 text-amber-400 font-bold px-7 py-4 rounded-lg text-xs uppercase tracking-wider border border-amber-500/30 hover:border-amber-400 flex items-center justify-center w-full sm:w-auto"
             >
               <Mail className="w-4 h-4 mr-2 text-amber-400" />
-              <span>Email sales@mayankindustries.org</span>
+              <span>Email purchase@mayankindustries.org</span>
             </a>
 
             <a

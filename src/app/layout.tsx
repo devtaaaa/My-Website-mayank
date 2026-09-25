@@ -57,7 +57,7 @@ export default function RootLayout({
       addressCountry: 'IN',
     },
     telephone: '+91-8799999920',
-    email: 'sales@mayankindustries.org',
+    email: 'purchase@mayankindustries.org',
     url: 'https://mayankindustries.org',
     openingHours: 'Mo-Sa 09:00-18:00',
     sameAs: [
